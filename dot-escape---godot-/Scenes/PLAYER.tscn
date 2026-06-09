@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://coypbcqkgc6je"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1oke1"]
+radius = 59.03389
+
+[node name="Node2D" type="Node2D" unique_id=1731859376]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=557527314]
+offset_left = -59.0
+offset_top = -59.0
+offset_right = 59.0
+offset_bottom = 59.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2124451684]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1415707767]
+shape = SubResource("CircleShape2D_1oke1")
