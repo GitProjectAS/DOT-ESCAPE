@@ -7,9 +7,10 @@ radius = 59.03389
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=557527314]
 offset_left = -59.0
-offset_top = -59.0
+offset_top = -60.0
 offset_right = 59.0
-offset_bottom = 59.0
+offset_bottom = 58.0
+color = Color(0, 1, 1, 1)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2124451684]
 
