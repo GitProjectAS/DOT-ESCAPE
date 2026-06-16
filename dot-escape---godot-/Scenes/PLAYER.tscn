@@ -1,18 +1,19 @@
 [gd_scene format=3 uid="uid://coypbcqkgc6je"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1oke1"]
-radius = 59.03389
+[ext_resource type="Script" uid="uid://cnw1ocb3hyvgl" path="res://scripts/player.gd" id="1_rpqav"]
 
-[node name="Node2D" type="Node2D" unique_id=1731859376]
+[sub_resource type="CircleShape2D" id="CircleShape2D_qbkls"]
+radius = 66.007576
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=557527314]
-offset_left = -59.0
-offset_top = -60.0
-offset_right = 59.0
-offset_bottom = 58.0
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1593322135]
+script = ExtResource("1_rpqav")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1879986971]
+shape = SubResource("CircleShape2D_qbkls")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=515790110]
+offset_left = -67.0
+offset_top = -69.0
+offset_right = 67.0
+offset_bottom = 68.0
 color = Color(0, 1, 1, 1)
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2124451684]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1415707767]
-shape = SubResource("CircleShape2D_1oke1")
