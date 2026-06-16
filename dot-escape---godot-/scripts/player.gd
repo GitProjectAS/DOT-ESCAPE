@@ -10,19 +10,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var direction = Vector2.ZERO
+	var movement = Vector2(
+		Input.get_axis("ui_left", "ui_right"),
+		Input.get_axis("ui_up", "ui_down"))
+	
 
-	if Input.is_action_pressed("ui_right"):
-		direction.x += 1
-
-	if Input.is_action_pressed("ui_left"):
-		direction.x -= 1
-
-	if Input.is_action_pressed("ui_down"):
-		direction.y += 1
-
-	if Input.is_action_pressed("ui_up"):
-		direction.y -= 1
-
-	velocity = direction.normalized() * speed
+	velocity = movement.normalized() * speed
 	move_and_slide()

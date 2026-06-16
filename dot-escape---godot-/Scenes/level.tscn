@@ -24,7 +24,7 @@ offset_bottom = 640.0
 color = Color(0, 0, 0, 1)
 
 [node name="CharacterBody2D" parent="." unique_id=1593322135 instance=ExtResource("1_tumq0")]
-position = Vector2(86, 369)
+position = Vector2(51, 414)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1408476891]
 position = Vector2(-55, 37)
