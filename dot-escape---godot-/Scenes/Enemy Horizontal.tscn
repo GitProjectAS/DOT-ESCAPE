@@ -1,20 +1,20 @@
 [gd_scene format=3 uid="uid://dr8xm58ngdrdp"]
 
-[ext_resource type="Script" uid="uid://c5irrm8kmwsod" path="res://scripts/enemy_horizontal.gd" id="1_ifryf"]
+[ext_resource type="Script" uid="uid://c5irrm8kmwsod" path="res://scripts/enemy_horizontal.gd" id="1_nan33"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qeoc8"]
-size = Vector2(43.5, 34.25)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cb60w"]
+size = Vector2(122, 102)
 
-[node name="Area2D" type="Area2D" unique_id=1623216077]
-script = ExtResource("1_ifryf")
+[node name="Area2D" type="Area2D" unique_id=1221250160]
+script = ExtResource("1_nan33")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=966999773]
-offset_left = -22.0
-offset_top = -19.0
-offset_right = 22.0
-offset_bottom = 15.0
-color = Color(0.5019608, 0, 0.5019608, 1)
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1005851283]
+offset_left = -64.0
+offset_top = -51.0
+offset_right = 62.0
+offset_bottom = 52.0
+color = Color(1, 0, 1, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1018649259]
-position = Vector2(0, -2.125)
-shape = SubResource("RectangleShape2D_qeoc8")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1049166916]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_cb60w")

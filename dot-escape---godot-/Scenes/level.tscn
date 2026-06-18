@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dh7xg2n1en1l0"]
 
 [ext_resource type="PackedScene" uid="uid://coypbcqkgc6je" path="res://Scenes/Player.tscn" id="1_tumq0"]
+[ext_resource type="PackedScene" uid="uid://dr8xm58ngdrdp" path="res://Scenes/enemy horizontal.tscn" id="2_k5f4k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tumq0"]
 size = Vector2(0, 644.5)
@@ -53,3 +54,9 @@ position = Vector2(1155, 2)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=353092808]
 position = Vector2(-2, 315)
 shape = SubResource("RectangleShape2D_81xng")
+
+[node name="Area2D" parent="." unique_id=1221250160 instance=ExtResource("2_k5f4k")]
+position = Vector2(1089, 108)
+
+[node name="Area2D2" parent="." unique_id=1383911601 instance=ExtResource("2_k5f4k")]
+position = Vector2(1085, 523)
