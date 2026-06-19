@@ -25,7 +25,7 @@ offset_bottom = 640.0
 color = Color(0, 0, 0, 1)
 
 [node name="CharacterBody2D" parent="." unique_id=1593322135 instance=ExtResource("1_tumq0")]
-position = Vector2(69, 487)
+position = Vector2(52, 317)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1408476891]
 position = Vector2(-57, 23)
@@ -56,7 +56,7 @@ position = Vector2(-2, 315)
 shape = SubResource("RectangleShape2D_81xng")
 
 [node name="Area2D" parent="." unique_id=1221250160 instance=ExtResource("2_k5f4k")]
-position = Vector2(1089, 108)
+position = Vector2(1089, 92)
 
 [node name="Area2D2" parent="." unique_id=1383911601 instance=ExtResource("2_k5f4k")]
-position = Vector2(1085, 523)
+position = Vector2(1088, 563)
