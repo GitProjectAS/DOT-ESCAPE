@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dtpbrgoxdawcg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t6s0g"]
+radius = 48.09366
+
+[node name="Area2D" type="Area2D" unique_id=1047996794]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1717622535]
+offset_left = -49.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+color = Color(0.53333336, 0.03137255, 0.03137255, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1818580986]
+shape = SubResource("CircleShape2D_t6s0g")
