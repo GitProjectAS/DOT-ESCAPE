@@ -3,7 +3,7 @@ extends Area2D
 @export var horizontal_speed = 150
 @export var vertical_speed = 100
 @export var top_limit = 100
-@export var bottom_limit = 500
+@export var bottom_limit = 580
 
 
 var direction = 1 
@@ -17,8 +17,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	position.x -= horizontal_speed * delta
 	position.y += vertical_speed * direction * delta
+
 	if position.y <= top_limit:
 		direction = 1
+
 	if position.y >= bottom_limit:
 		direction = -1
 
@@ -26,3 +28,9 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		body.position = body.spawn_position
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group("vertical enemies"):
+		direction *= -1
+		area.direction *= -1
