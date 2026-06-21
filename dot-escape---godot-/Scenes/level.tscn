@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://coypbcqkgc6je" path="res://Scenes/Player.tscn" id="1_tumq0"]
 [ext_resource type="PackedScene" uid="uid://dr8xm58ngdrdp" path="res://Scenes/enemy horizontal.tscn" id="2_k5f4k"]
+[ext_resource type="PackedScene" uid="uid://dtpbrgoxdawcg" path="res://Scenes/Vertical_enemy.tscn" id="3_6phgx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tumq0"]
 size = Vector2(0, 644.5)
@@ -19,9 +20,10 @@ size = Vector2(4, 650)
 position = Vector2(3, -2)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1907976343]
-offset_top = -2.0
-offset_right = 1150.0
-offset_bottom = 640.0
+offset_left = 6.0
+offset_top = -5.0
+offset_right = 1156.0
+offset_bottom = 637.0
 color = Color(0, 0, 0, 1)
 
 [node name="CharacterBody2D" parent="." unique_id=1593322135 instance=ExtResource("1_tumq0")]
@@ -60,3 +62,9 @@ position = Vector2(1089, 92)
 
 [node name="Area2D2" parent="." unique_id=1383911601 instance=ExtResource("2_k5f4k")]
 position = Vector2(1088, 563)
+
+[node name="Area2D3" parent="." unique_id=1047996794 instance=ExtResource("3_6phgx")]
+position = Vector2(1104, 208)
+
+[node name="Area2D4" parent="." unique_id=201695813 instance=ExtResource("3_6phgx")]
+position = Vector2(1104, 307)
