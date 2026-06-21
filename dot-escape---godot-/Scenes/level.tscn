@@ -63,5 +63,5 @@ position = Vector2(1104, 55)
 [node name="Area2D4" parent="." unique_id=201695813 instance=ExtResource("3_6phgx")]
 position = Vector2(1100, 590)
 
-[node name="Area2D" parent="." unique_id=1221250160 instance=ExtResource("2_k5f4k")]
+[node name="Area2D" parent="." unique_id=1221250160 groups=["vertical enemies"] instance=ExtResource("2_k5f4k")]
 position = Vector2(1093, 340)

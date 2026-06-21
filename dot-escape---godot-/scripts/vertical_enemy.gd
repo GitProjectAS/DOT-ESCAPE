@@ -28,9 +28,3 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		body.position = body.spawn_position
-
-
-func _on_area_entered(area: Area2D) -> void:
-	if area.is_in_group("vertical enemies"):
-		direction *= -1
-		area.direction *= -1
