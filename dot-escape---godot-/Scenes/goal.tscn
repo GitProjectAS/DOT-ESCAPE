@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://dhhpj0uksvtxl"]
 
+[ext_resource type="Script" uid="uid://3f1ftyc182i8" path="res://scripts/goal.gd" id="1_paeek"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ax2ce"]
 radius = 40.112343
 
 [node name="Area2D" type="Area2D" unique_id=472797888]
+script = ExtResource("1_paeek")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=557199081]
 offset_left = -41.0
@@ -14,3 +17,5 @@ color = Color(0, 1, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=15828112]
 shape = SubResource("CircleShape2D_ax2ce")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

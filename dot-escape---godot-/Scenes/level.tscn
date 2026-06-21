@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://coypbcqkgc6je" path="res://Scenes/Player.tscn" id="1_tumq0"]
 [ext_resource type="PackedScene" uid="uid://dr8xm58ngdrdp" path="res://Scenes/enemy horizontal.tscn" id="2_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://dtpbrgoxdawcg" path="res://Scenes/Vertical_enemy.tscn" id="3_6phgx"]
+[ext_resource type="PackedScene" uid="uid://dhhpj0uksvtxl" path="res://Scenes/goal.tscn" id="4_81xng"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tumq0"]
 size = Vector2(0, 644.5)
@@ -65,3 +66,6 @@ position = Vector2(1100, 590)
 
 [node name="Area2D" parent="." unique_id=1221250160 groups=["vertical enemies"] instance=ExtResource("2_k5f4k")]
 position = Vector2(1093, 340)
+
+[node name="Area2D2" parent="." unique_id=472797888 instance=ExtResource("4_81xng")]
+position = Vector2(860, 512)
