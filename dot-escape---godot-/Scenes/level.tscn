@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://dr8xm58ngdrdp" path="res://Scenes/enemy horizontal.tscn" id="2_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://dtpbrgoxdawcg" path="res://Scenes/Vertical_enemy.tscn" id="3_6phgx"]
 [ext_resource type="PackedScene" uid="uid://dhhpj0uksvtxl" path="res://Scenes/goal.tscn" id="4_81xng"]
+[ext_resource type="Script" uid="uid://ds5rwtl2rdg1o" path="res://scripts/Horizontal_enemy_spawner.gd" id="5_wqkje"]
+[ext_resource type="Script" uid="uid://bxe6wjo6btiyr" path="res://scripts/vertical_enemy_spawner.gd" id="6_0f350"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tumq0"]
 size = Vector2(0, 644.5)
@@ -69,3 +71,22 @@ position = Vector2(1093, 340)
 
 [node name="Area2D2" parent="." unique_id=472797888 instance=ExtResource("4_81xng")]
 position = Vector2(860, 512)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=781344243]
+script = ExtResource("5_wqkje")
+enemy_scene = ExtResource("2_k5f4k")
+
+[node name="Timer" type="Timer" parent="Node2D" unique_id=865021012]
+wait_time = 2.0
+autostart = true
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=2064547506]
+script = ExtResource("6_0f350")
+vertical_enemy_scene = ExtResource("3_6phgx")
+
+[node name="Timer" type="Timer" parent="Node2D2" unique_id=1581692859]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Node2D/Timer" to="Node2D" method="_on_timer_timeout"]
+[connection signal="timeout" from="Node2D2/Timer" to="Node2D2" method="_on_timer_timeout"]
