@@ -23,10 +23,10 @@ size = Vector2(4, 650)
 position = Vector2(3, -2)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1907976343]
-offset_left = 6.0
-offset_top = 4.0
-offset_right = 1156.0
-offset_bottom = 646.0
+offset_left = 5.0
+offset_top = -3.0
+offset_right = 1155.0
+offset_bottom = 639.0
 color = Color(0, 0, 0, 1)
 
 [node name="CharacterBody2D" parent="." unique_id=1593322135 instance=ExtResource("1_tumq0")]
@@ -70,7 +70,7 @@ position = Vector2(1100, 590)
 position = Vector2(1093, 340)
 
 [node name="Area2D2" parent="." unique_id=472797888 instance=ExtResource("4_81xng")]
-position = Vector2(860, 512)
+position = Vector2(931, 592)
 
 [node name="Node2D" type="Node2D" parent="." unique_id=781344243]
 script = ExtResource("5_wqkje")
