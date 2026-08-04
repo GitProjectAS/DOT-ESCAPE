@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dhhpj0uksvtxl" path="res://Scenes/goal.tscn" id="4_81xng"]
 [ext_resource type="Script" uid="uid://ds5rwtl2rdg1o" path="res://scripts/Horizontal_enemy_spawner.gd" id="5_wqkje"]
 [ext_resource type="Script" uid="uid://bxe6wjo6btiyr" path="res://scripts/vertical_enemy_spawner.gd" id="6_0f350"]
+[ext_resource type="Script" uid="uid://djr285s7g7tsh" path="res://Scripts/GameTimer.gd" id="7_8c0lf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tumq0"]
 size = Vector2(0, 644.5)
@@ -67,7 +68,7 @@ position = Vector2(1104, 55)
 position = Vector2(1100, 590)
 
 [node name="Area2D" parent="." unique_id=1221250160 groups=["vertical enemies"] instance=ExtResource("2_k5f4k")]
-position = Vector2(1093, 340)
+position = Vector2(1108, 441)
 
 [node name="Area2D2" parent="." unique_id=472797888 instance=ExtResource("4_81xng")]
 position = Vector2(931, 592)
@@ -88,5 +89,41 @@ vertical_enemy_scene = ExtResource("3_6phgx")
 wait_time = 3.0
 autostart = true
 
+[node name="Area2D5" parent="." unique_id=1921758363 instance=ExtResource("2_k5f4k")]
+position = Vector2(1111, 209)
+
+[node name="Area2D6" parent="." unique_id=320401989 instance=ExtResource("2_k5f4k")]
+position = Vector2(1107, 335)
+
+[node name="Area2D7" parent="." unique_id=1956403440 instance=ExtResource("3_6phgx")]
+position = Vector2(534, 624)
+
+[node name="Area2D8" parent="." unique_id=1051012854 instance=ExtResource("3_6phgx")]
+position = Vector2(565, 24)
+
+[node name="Area2D9" parent="." unique_id=610461644 instance=ExtResource("3_6phgx")]
+position = Vector2(759, 623)
+
+[node name="Area2D10" parent="." unique_id=98362557 instance=ExtResource("3_6phgx")]
+position = Vector2(776, 14)
+
+[node name="Area2D11" parent="." unique_id=424599713 instance=ExtResource("3_6phgx")]
+position = Vector2(937, 17)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1960761694]
+script = ExtResource("7_8c0lf")
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=1930018650]
+offset_left = 30.0
+offset_top = 7.0
+offset_right = 220.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 31
+text = " TIMER  00:00"
+
+[node name="Timer" type="Timer" parent="CanvasLayer" unique_id=1459085420]
+autostart = true
+
 [connection signal="timeout" from="Node2D/Timer" to="Node2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Node2D2/Timer" to="Node2D2" method="_on_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]

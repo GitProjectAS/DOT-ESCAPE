@@ -3,16 +3,16 @@
 [ext_resource type="Script" uid="uid://3f1ftyc182i8" path="res://scripts/goal.gd" id="1_paeek"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ax2ce"]
-radius = 40.112343
+radius = 16.124516
 
 [node name="Area2D" type="Area2D" unique_id=472797888]
 script = ExtResource("1_paeek")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=557199081]
-offset_left = -41.0
-offset_top = -40.0
-offset_right = 41.0
-offset_bottom = 40.0
+offset_left = -16.0
+offset_top = -17.0
+offset_right = 16.0
+offset_bottom = 17.0
 color = Color(0, 1, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=15828112]

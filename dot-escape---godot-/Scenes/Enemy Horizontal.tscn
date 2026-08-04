@@ -3,20 +3,20 @@
 [ext_resource type="Script" uid="uid://c5irrm8kmwsod" path="res://scripts/enemy_horizontal.gd" id="1_nan33"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cb60w"]
-size = Vector2(122, 102)
+size = Vector2(70, 34)
 
 [node name="Area2D" type="Area2D" unique_id=1221250160]
 script = ExtResource("1_nan33")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1005851283]
-offset_left = -64.0
-offset_top = -51.0
-offset_right = 62.0
-offset_bottom = 52.0
+offset_left = -36.0
+offset_top = -15.0
+offset_right = 36.0
+offset_bottom = 19.0
 color = Color(1, 0, 1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1049166916]
-position = Vector2(-1, 0)
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_cb60w")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
