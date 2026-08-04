@@ -124,6 +124,14 @@ text = " TIMER  00:00"
 [node name="Timer" type="Timer" parent="CanvasLayer" unique_id=1459085420]
 autostart = true
 
+[node name="LevelLabel" type="Label" parent="CanvasLayer" unique_id=1584730002]
+offset_left = 35.0
+offset_top = 63.0
+offset_right = 221.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 31
+text = "  LEVEL: 1 "
+
 [connection signal="timeout" from="Node2D/Timer" to="Node2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Node2D2/Timer" to="Node2D2" method="_on_timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]
