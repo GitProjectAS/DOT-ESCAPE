@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://bguwn02nrtpip"]
 
+[ext_resource type="Script" uid="uid://uab0e0wkbnau" path="res://Scenes/main_screen.gd" id="1_s7h0p"]
+
 [node name="Control" type="Control" unique_id=1636839503]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1154.0
 offset_bottom = 650.0
+script = ExtResource("1_s7h0p")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1156514504]
 layout_mode = 0
@@ -45,3 +48,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "QUIT
 "
+
+[connection signal="pressed" from="VBoxContainer/Play button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/setting button" to="." method="_on_setting_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit button" to="." method="_on_quit_button_pressed"]

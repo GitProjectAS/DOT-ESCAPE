@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Dot Escape - godot"
-run/main_scene="uid://dh7xg2n1en1l0"
+run/main_scene="uid://bguwn02nrtpip"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
