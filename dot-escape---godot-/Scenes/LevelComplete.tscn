@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bpfw0ryxud23u"]
+
+[node name="Control" type="Control" unique_id=587618868]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 643.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1754648424]
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 643.0
+color = Color(0.38321832, 0.38321835, 0.38321832, 1)

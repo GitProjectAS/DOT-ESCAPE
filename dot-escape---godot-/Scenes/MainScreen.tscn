@@ -13,6 +13,7 @@ script = ExtResource("1_s7h0p")
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 649.0
+color = Color(0.39232534, 0.39232537, 0.39232534, 1)
 
 [node name="Label" type="Label" parent="." unique_id=1203548160]
 layout_mode = 0
