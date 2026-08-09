@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://ds5rwtl2rdg1o" path="res://scripts/Horizontal_enemy_spawner.gd" id="5_wqkje"]
 [ext_resource type="Script" uid="uid://bxe6wjo6btiyr" path="res://scripts/vertical_enemy_spawner.gd" id="6_0f350"]
 [ext_resource type="Script" uid="uid://djr285s7g7tsh" path="res://Scripts/GameTimer.gd" id="7_8c0lf"]
+[ext_resource type="PackedScene" uid="uid://cnly6f4835qfs" path="res://Scenes/PauseMenu.tscn" id="9_oqgf2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tumq0"]
 size = Vector2(0, 644.5)
@@ -19,6 +20,35 @@ size = Vector2(1161, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81xng"]
 size = Vector2(4, 650)
+
+[sub_resource type="GDScript" id="GDScript_754fn"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_pressed() -> void:
+	$PauseMenu.visible = true
+	get_tree().paused = true
+
+
+func _on_resume_button_pressed() -> void:
+	get_tree().paused = false
+	visible = false
+
+
+func _on_main_menu_pressed() -> void:
+	get_tree().paused = false
+	get_tree().change_scene_to_file(\"res://Scenes/MainScreen.tscn\")
+"
 
 [node name="Node2D" type="Node2D" unique_id=1831047537]
 position = Vector2(3, -2)
@@ -139,7 +169,13 @@ offset_right = 1136.0
 offset_bottom = 83.0
 theme_override_font_sizes/font_size = 30
 text = "Pause"
+script = SubResource("GDScript_754fn")
+
+[node name="PauseScene" parent="CanvasLayer" unique_id=1020488142 instance=ExtResource("9_oqgf2")]
 
 [connection signal="timeout" from="Node2D/Timer" to="Node2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Node2D2/Timer" to="Node2D2" method="_on_timer_timeout"]
 [connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/PauseButton" to="CanvasLayer" method="_on_pause_button_pressed"]
+
+[editable path="CanvasLayer/PauseScene"]

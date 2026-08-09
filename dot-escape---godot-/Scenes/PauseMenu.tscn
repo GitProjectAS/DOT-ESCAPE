@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://cnly6f4835qfs"]
 
-[node name="Control" type="Control" unique_id=1020488142]
+[ext_resource type="Script" uid="uid://csjte003vq8s8" path="res://Scripts/PauseScene.gd" id="1_lj4oq"]
+
+[node name="PauseScene" type="Control" unique_id=1020488142]
+process_mode = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_lj4oq")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1913639648]
 layout_mode = 0
@@ -34,13 +38,16 @@ offset_right = 719.0
 offset_bottom = 505.0
 alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=2071162066]
+[node name="ResumeButton" type="Button" parent="VBoxContainer" unique_id=2071162066]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "RESUME"
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1194311606]
+[node name="Main Menu" type="Button" parent="VBoxContainer" unique_id=1194311606]
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "MAIN MENU
 "
+
+[connection signal="pressed" from="VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Main Menu" to="." method="_on_main_menu_pressed"]
