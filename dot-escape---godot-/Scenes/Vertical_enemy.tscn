@@ -18,4 +18,5 @@ color = Color(0.53333336, 0.03137255, 0.03137255, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1818580986]
 shape = SubResource("CircleShape2D_t6s0g")
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

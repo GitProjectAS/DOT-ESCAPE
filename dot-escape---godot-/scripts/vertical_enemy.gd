@@ -31,4 +31,5 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
+	if area.is_in_group("horizontal_enemy"):
+		direction *= -1

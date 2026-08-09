@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cb60w"]
 size = Vector2(70, 34)
 
-[node name="Area2D" type="Area2D" unique_id=1221250160]
+[node name="Area2D" type="Area2D" unique_id=1221250160 groups=["horizontal_enemy"]]
 script = ExtResource("1_nan33")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1005851283]
