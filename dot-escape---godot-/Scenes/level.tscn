@@ -62,7 +62,7 @@ position = Vector2(-2, 315)
 shape = SubResource("RectangleShape2D_81xng")
 
 [node name="Area2D3" parent="." unique_id=1047996794 instance=ExtResource("3_6phgx")]
-position = Vector2(1104, 55)
+position = Vector2(1082, 191)
 
 [node name="Area2D4" parent="." unique_id=201695813 instance=ExtResource("3_6phgx")]
 position = Vector2(1100, 590)
@@ -108,7 +108,7 @@ position = Vector2(759, 623)
 position = Vector2(776, 14)
 
 [node name="Area2D11" parent="." unique_id=424599713 instance=ExtResource("3_6phgx")]
-position = Vector2(937, 17)
+position = Vector2(875, 113)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1960761694]
 script = ExtResource("7_8c0lf")
@@ -131,6 +131,14 @@ offset_right = 221.0
 offset_bottom = 104.0
 theme_override_font_sizes/font_size = 31
 text = "  LEVEL: 1 "
+
+[node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=975919535]
+offset_left = 1041.0
+offset_top = 17.0
+offset_right = 1136.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 30
+text = "Pause"
 
 [connection signal="timeout" from="Node2D/Timer" to="Node2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Node2D2/Timer" to="Node2D2" method="_on_timer_timeout"]
