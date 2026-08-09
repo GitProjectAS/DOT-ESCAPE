@@ -68,7 +68,7 @@ position = Vector2(1104, 55)
 position = Vector2(1100, 590)
 
 [node name="Area2D" parent="." unique_id=1221250160 groups=["vertical enemies"] instance=ExtResource("2_k5f4k")]
-position = Vector2(1108, 441)
+position = Vector2(300, 454)
 
 [node name="Area2D2" parent="." unique_id=472797888 instance=ExtResource("4_81xng")]
 position = Vector2(931, 592)
@@ -90,10 +90,10 @@ wait_time = 3.0
 autostart = true
 
 [node name="Area2D5" parent="." unique_id=1921758363 instance=ExtResource("2_k5f4k")]
-position = Vector2(1111, 209)
+position = Vector2(487, 167)
 
 [node name="Area2D6" parent="." unique_id=320401989 instance=ExtResource("2_k5f4k")]
-position = Vector2(1107, 335)
+position = Vector2(884, 337)
 
 [node name="Area2D7" parent="." unique_id=1956403440 instance=ExtResource("3_6phgx")]
 position = Vector2(534, 624)
