@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://bpfw0ryxud23u"]
 
-[node name="Control" type="Control" unique_id=587618868]
+[ext_resource type="Script" uid="uid://d3ijcsnp4dp75" path="res://Scripts/level_complete.gd" id="1_s5v0a"]
+
+[node name="levelcomplete" type="Control" unique_id=587618868]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1154.0
 offset_bottom = 643.0
+script = ExtResource("1_s5v0a")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1754648424]
 layout_mode = 0
@@ -59,7 +62,7 @@ offset_bottom = 603.0
 theme_override_font_sizes/font_size = 40
 text = "MENU"
 
-[node name="Button" type="Button" parent="." unique_id=441766468]
+[node name="Retry Button" type="Button" parent="." unique_id=441766468]
 layout_mode = 0
 offset_left = 872.0
 offset_top = 470.0
@@ -67,3 +70,6 @@ offset_right = 1106.0
 offset_bottom = 602.0
 theme_override_font_sizes/font_size = 40
 text = "Retry"
+
+[connection signal="pressed" from="Menu Button" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Retry Button" to="." method="_on_retry_button_pressed"]
