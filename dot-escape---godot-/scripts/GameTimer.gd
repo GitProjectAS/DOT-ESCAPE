@@ -20,6 +20,8 @@ func _on_timer_timeout() -> void:
 	if seconds >= 60:
 		seconds = 0 
 		minutes += 1
+	GameData.completion_time = (minutes * 60) + seconds
+
 	$TimerLabel.text = str(minutes) + ":" + str(seconds)
 
 
