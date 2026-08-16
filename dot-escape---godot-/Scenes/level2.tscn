@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://dljr6uiluxk41"]
+
+[ext_resource type="PackedScene" uid="uid://coypbcqkgc6je" path="res://Scenes/Player.tscn" id="1_lgosu"]
+[ext_resource type="PackedScene" uid="uid://dtpbrgoxdawcg" path="res://Scenes/Vertical_enemy.tscn" id="2_mhlpv"]
+[ext_resource type="PackedScene" uid="uid://dr8xm58ngdrdp" path="res://Scenes/enemy horizontal.tscn" id="3_ng020"]
+[ext_resource type="PackedScene" uid="uid://dhhpj0uksvtxl" path="res://Scenes/goal.tscn" id="4_vn2uo"]
+[ext_resource type="Script" uid="uid://bxe6wjo6btiyr" path="res://scripts/vertical_enemy_spawner.gd" id="5_mtqcm"]
+[ext_resource type="Script" uid="uid://djr285s7g7tsh" path="res://Scripts/GameTimer.gd" id="6_mmf1u"]
+[ext_resource type="PackedScene" uid="uid://cnly6f4835qfs" path="res://Scenes/PauseMenu.tscn" id="7_vn460"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tumq0"]
+size = Vector2(0, 644.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5f4k"]
+size = Vector2(1154.5, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6phgx"]
+size = Vector2(1161, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81xng"]
+size = Vector2(4, 650)
+
+[sub_resource type="GDScript" id="GDScript_754fn"]
+script/source = "extends Button
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_pressed() -> void:
+	$PauseMenu.visible = true
+	get_tree().paused = true
+
+
+func _on_resume_button_pressed() -> void:
+	get_tree().paused = false
+	visible = false
+
+
+func _on_main_menu_pressed() -> void:
+	get_tree().paused = false
+	get_tree().change_scene_to_file(\"res://Scenes/MainScreen.tscn\")
+"
+
+[node name="Node2D" type="Node2D" unique_id=1831047537]
+position = Vector2(3, -2)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1907976343]
+offset_left = -2.0
+offset_top = 10.0
+offset_right = 1148.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+
+[node name="CharacterBody2D" parent="." unique_id=1593322135 instance=ExtResource("1_lgosu")]
+position = Vector2(52, 317)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1408476891]
+position = Vector2(-57, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=636188286]
+position = Vector2(54, 282.75)
+shape = SubResource("RectangleShape2D_tumq0")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=467336729]
+position = Vector2(182, 57)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1983177052]
+position = Vector2(389.75, -59.75)
+shape = SubResource("RectangleShape2D_k5f4k")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=762023781]
+position = Vector2(-2, 649)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1069096666]
+position = Vector2(570.5, -7.5)
+shape = SubResource("RectangleShape2D_6phgx")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=751021028]
+position = Vector2(1155, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=353092808]
+position = Vector2(-2, 315)
+shape = SubResource("RectangleShape2D_81xng")
+
+[node name="Area2D3" parent="." unique_id=1047996794 instance=ExtResource("2_mhlpv")]
+position = Vector2(1082, 191)
+
+[node name="Area2D4" parent="." unique_id=201695813 instance=ExtResource("2_mhlpv")]
+position = Vector2(1100, 590)
+
+[node name="Area2D" parent="." unique_id=1221250160 groups=["vertical enemies"] instance=ExtResource("3_ng020")]
+position = Vector2(300, 454)
+
+[node name="Area2D2" parent="." unique_id=472797888 instance=ExtResource("4_vn2uo")]
+position = Vector2(931, 592)
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=2064547506]
+script = ExtResource("5_mtqcm")
+vertical_enemy_scene = ExtResource("2_mhlpv")
+
+[node name="Timer" type="Timer" parent="Node2D2" unique_id=1581692859]
+autostart = true
+
+[node name="Area2D5" parent="." unique_id=1921758363 instance=ExtResource("3_ng020")]
+position = Vector2(487, 167)
+
+[node name="Area2D6" parent="." unique_id=320401989 instance=ExtResource("3_ng020")]
+position = Vector2(884, 337)
+
+[node name="Area2D7" parent="." unique_id=1956403440 instance=ExtResource("2_mhlpv")]
+position = Vector2(534, 624)
+
+[node name="Area2D8" parent="." unique_id=1051012854 instance=ExtResource("2_mhlpv")]
+position = Vector2(565, 24)
+
+[node name="Area2D9" parent="." unique_id=610461644 instance=ExtResource("2_mhlpv")]
+position = Vector2(759, 623)
+
+[node name="Area2D10" parent="." unique_id=98362557 instance=ExtResource("2_mhlpv")]
+position = Vector2(776, 14)
+
+[node name="Area2D11" parent="." unique_id=424599713 instance=ExtResource("2_mhlpv")]
+position = Vector2(875, 113)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1960761694]
+script = ExtResource("6_mmf1u")
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=1930018650]
+offset_left = 30.0
+offset_top = 7.0
+offset_right = 220.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 31
+text = " TIMER  00:00"
+
+[node name="Timer" type="Timer" parent="CanvasLayer" unique_id=1459085420]
+autostart = true
+
+[node name="LevelLabel" type="Label" parent="CanvasLayer" unique_id=1584730002]
+offset_left = 35.0
+offset_top = 63.0
+offset_right = 221.0
+offset_bottom = 104.0
+theme_override_font_sizes/font_size = 31
+text = "  LEVEL: 2
+"
+
+[node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=975919535]
+offset_left = 1041.0
+offset_top = 17.0
+offset_right = 1136.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 30
+text = "Pause"
+script = SubResource("GDScript_754fn")
+
+[node name="PauseScene" parent="CanvasLayer" unique_id=1020488142 instance=ExtResource("7_vn460")]
+offset_top = -4.0
+offset_right = 5.0
+offset_bottom = -4.0
+
+[node name="ColorRect" parent="CanvasLayer/PauseScene" index="0" unique_id=1913639648]
+offset_left = 4.0
+offset_top = 8.0
+offset_right = 1150.0
+offset_bottom = 655.0
+
+[node name="Area2D" parent="CanvasLayer/PauseScene" unique_id=122216939 instance=ExtResource("3_ng020")]
+position = Vector2(696, 475)
+
+[connection signal="timeout" from="Node2D2/Timer" to="Node2D2" method="_on_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/PauseButton" to="CanvasLayer" method="_on_pause_button_pressed"]
+
+[editable path="CanvasLayer/PauseScene"]
