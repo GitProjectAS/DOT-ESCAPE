@@ -109,6 +109,12 @@ vertical_enemy_scene = ExtResource("2_mhlpv")
 [node name="Timer" type="Timer" parent="Node2D2" unique_id=1581692859]
 autostart = true
 
+[node name="Button" type="Button" parent="Node2D2/Timer" unique_id=48304817]
+offset_left = 73.0
+offset_top = 477.0
+offset_right = 328.0
+offset_bottom = 603.0
+
 [node name="Area2D5" parent="." unique_id=1921758363 instance=ExtResource("3_ng020")]
 position = Vector2(487, 167)
 
@@ -168,9 +174,7 @@ offset_right = 5.0
 offset_bottom = -4.0
 
 [node name="ColorRect" parent="CanvasLayer/PauseScene" index="0" unique_id=1913639648]
-offset_left = 4.0
 offset_top = 8.0
-offset_right = 1150.0
 offset_bottom = 655.0
 
 [node name="Area2D" parent="CanvasLayer/PauseScene" unique_id=122216939 instance=ExtResource("3_ng020")]
