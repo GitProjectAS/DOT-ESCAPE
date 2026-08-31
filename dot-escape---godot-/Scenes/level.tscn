@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dtpbrgoxdawcg" path="res://Scenes/Vertical_enemy.tscn" id="3_6phgx"]
 [ext_resource type="PackedScene" uid="uid://dhhpj0uksvtxl" path="res://Scenes/goal.tscn" id="4_81xng"]
 [ext_resource type="Script" uid="uid://bxe6wjo6btiyr" path="res://scripts/vertical_enemy_spawner.gd" id="6_0f350"]
-[ext_resource type="Script" uid="uid://djr285s7g7tsh" path="res://Scripts/GameTimer.gd" id="7_8c0lf"]
+[ext_resource type="Script" uid="uid://djr285s7g7tsh" path="res://scripts/GameTimer.gd" id="7_8c0lf"]
 [ext_resource type="PackedScene" uid="uid://cnly6f4835qfs" path="res://Scenes/PauseMenu.tscn" id="9_oqgf2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tumq0"]
@@ -173,6 +173,12 @@ offset_left = 5.0
 offset_top = -3.0
 offset_right = 1151.0
 offset_bottom = 644.0
+
+[node name="TextureRect" parent="CanvasLayer/PauseScene" index="2" unique_id=1778409827]
+offset_left = -3.0
+offset_top = 5.0
+offset_right = 1149.0
+offset_bottom = 653.0
 
 [node name="Area2D" parent="CanvasLayer/PauseScene" unique_id=122216939 instance=ExtResource("2_k5f4k")]
 position = Vector2(696, 475)

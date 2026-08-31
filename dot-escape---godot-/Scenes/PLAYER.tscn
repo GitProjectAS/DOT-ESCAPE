@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cnw1ocb3hyvgl" path="res://scripts/player.gd" id="1_rpqav"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qbkls"]
-radius = 22.803509
+radius = 22.022715
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1593322135]
 script = ExtResource("1_rpqav")
@@ -11,8 +11,8 @@ script = ExtResource("1_rpqav")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=515790110]
 offset_left = -23.0
 offset_top = -22.0
-offset_right = 24.0
-offset_bottom = 25.0
+offset_right = 23.0
+offset_bottom = 23.0
 color = Color(0, 1, 1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1879986971]

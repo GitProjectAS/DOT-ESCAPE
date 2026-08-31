@@ -37,9 +37,9 @@ alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=956842270]
 layout_mode = 0
-offset_left = 1.0
+offset_left = -4.0
 offset_top = -1.0
-offset_right = 1159.0
+offset_right = 1154.0
 offset_bottom = 647.0
 mouse_filter = 2
 texture = ExtResource("2_ewbgq")
