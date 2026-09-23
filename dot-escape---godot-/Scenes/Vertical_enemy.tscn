@@ -1,22 +1,21 @@
 [gd_scene format=3 uid="uid://dtpbrgoxdawcg"]
 
 [ext_resource type="Script" uid="uid://dvp1a0r4goew1" path="res://scripts/vertical_enemy.gd" id="1_lo7gl"]
+[ext_resource type="Texture2D" uid="uid://ct8md4n72e4ji" path="res://assets/Vertical Enemy Design - Dot Escape.png" id="2_fwxt1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t6s0g"]
-radius = 13.0
+radius = 18.384777
 
 [node name="Area2D" type="Area2D" unique_id=1047996794]
 script = ExtResource("1_lo7gl")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1717622535]
-offset_left = -13.0
-offset_top = -13.0
-offset_right = 13.0
-offset_bottom = 13.0
-color = Color(0.53333336, 0.03137255, 0.03137255, 1)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1818580986]
 shape = SubResource("CircleShape2D_t6s0g")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1582355893]
+position = Vector2(-3, -0.50000274)
+scale = Vector2(0.84375, 0.8359375)
+texture = ExtResource("2_fwxt1")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

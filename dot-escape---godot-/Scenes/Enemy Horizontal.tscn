@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dr8xm58ngdrdp"]
 
 [ext_resource type="Script" uid="uid://c5irrm8kmwsod" path="res://scripts/enemy_horizontal.gd" id="1_nan33"]
+[ext_resource type="Texture2D" uid="uid://dgmp0jvq2cy6a" path="res://assets/Horizontal Enemy Design - Dot Escape.png" id="2_epcfa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cb60w"]
 size = Vector2(70, 34)
@@ -8,15 +9,13 @@ size = Vector2(70, 34)
 [node name="Area2D" type="Area2D" unique_id=1221250160 groups=["horizontal_enemy"]]
 script = ExtResource("1_nan33")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1005851283]
-offset_left = -36.0
-offset_top = -15.0
-offset_right = 36.0
-offset_bottom = 19.0
-color = Color(1, 0, 1, 1)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1049166916]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_cb60w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1493267392]
+position = Vector2(-0.99999714, -1.999996)
+scale = Vector2(1.078125, 1.6406251)
+texture = ExtResource("2_epcfa")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

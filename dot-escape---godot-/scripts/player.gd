@@ -1,16 +1,11 @@
 extends CharacterBody2D
 
-var speed = 300 
+@export var speed: float = 300.0
+var spawn_position: Vector2
 
-var spawn_position
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	spawn_position = position
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var movement = Vector2(
 		Input.get_axis("ui_left", "ui_right"),

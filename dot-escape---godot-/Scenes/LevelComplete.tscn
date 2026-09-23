@@ -78,9 +78,10 @@ text = "Retry"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1768926986]
 layout_mode = 0
-offset_left = 5.0
-offset_right = 1161.0
-offset_bottom = 648.0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1157.0
+offset_bottom = 650.0
 mouse_filter = 2
 texture = ExtResource("2_eqxnh")
 
